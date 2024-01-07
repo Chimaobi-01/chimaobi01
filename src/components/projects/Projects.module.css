@@ -1,0 +1,54 @@
+.heading {
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  line-height: 3rem;
+  justify-content: space-between;
+  color: gray;
+  text-transform: uppercase;
+}
+.hr {
+  flex: 1;
+  height: 2px;
+  background-color: gray;
+  display: inline-block;
+}
+.project_grid {
+  display: grid;
+  /* grid-template-columns: repeat(3, minmax(26.25rem, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+ gap: 1rem;
+  margin-top: 3.5rem;
+}
+.grid_item {
+  box-shadow: rgba(0, 0, 0, 0.2);
+  @apply rounded-lg flex flex-col justify-center relative;
+  height: 32.31rem;
+}
+
+.grid_item:hover {
+  
+}
+
+
+.screenshot_detail {
+  @apply px-8 pb-8 absolute flex-col gap-4 flex text-black left-0 bottom-0 z-10;
+}
+
+.title {
+font-size: 2rem;
+font-style: normal;
+font-weight: 500;
+line-height: 1;
+}
+
+.link {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: underline;
+  
+}

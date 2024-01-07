@@ -1,0 +1,18 @@
+
+
+
+.hero {
+    @apply w-screen h-screen flex justify-center items-center container mx-auto px-8 relative;
+}
+
+
+.h1 {
+    @apply font-extrabold text-5xl leading-8 text-slate-400 flex flex-col gap-5 py-8;
+    letter-spacing: 2px;
+}
+.h1 span {
+    @apply text-slate-800;
+}
+.btn {
+    @apply flex font-medium items-center gap-4 text-slate-500 justify-between ;
+}
