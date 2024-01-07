@@ -40,6 +40,7 @@ const Project = () => {
                 title={n.title}  
                 type={n.type} 
                 img={n.img}
+                url={n.title.trim().toLowerCase().split(" ").join("-")}
               />
             )
           }

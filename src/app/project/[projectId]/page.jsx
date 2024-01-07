@@ -1,15 +1,22 @@
+import Link from "next/link";
+import { BsArrowRight } from 'react-icons/bs'
 
 
 
 const CoffePage = (props) => {
-  console.log(props);
+  // console.log(props);
 
 
   return (
     <div className="min-h-screen font-['Roboto']">
-      <header></header>
+      <header className="py-16 px-32 items-center justify-end flex">
+        <Link href={`/`} className="poiret text-lg p-2 rounded-lg hover:bg-gray-200 items-center flex gap-2 group">
+        <BsArrowRight className='text-xl hidden group-hover:flex transform rotate-180 ' />
+          BAck to Home
+        </Link>
+      </header>
       <section className="container mx-auto">
-        <section className=" p-32 min-h-screen flex-col flex">
+        <section className=" px-32 min-h-screen flex-col flex">
           <div className="flex-1">
             <div className="py-10">
               <h1 className="project_title text-4xl font-bold leading-[52px]">Coffee By Benjamin</h1>
