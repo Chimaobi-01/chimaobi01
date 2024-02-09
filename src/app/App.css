@@ -165,7 +165,7 @@ img{
     overflow: hidden;
     transition: all .25s ease-out;
     width: 100%;
-    max-width: fit-content;
+    max-width: 235px;
 }
 
 .button_icon{
