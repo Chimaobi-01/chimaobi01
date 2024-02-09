@@ -13,8 +13,10 @@ import './themes.scss'
 
 const Themes = () => {
     const [showSwitcher, setShowSwitcher] = useState(false)
-    const [color, setColor] = useState('hsl(225, 73%, 57%)')
-    const [theme, setTheme] = useState('light-theme')
+    const [color, setColor] = useState(getStorageColor())
+    const [theme, setTheme] = useState(getStorageTheme())
+
+    
 
     const changeColor = color => {
         setColor(color)
@@ -71,17 +73,18 @@ const Themes = () => {
 
 export default Themes
 
-// const getStorageColor = () => {
-//     let color = 'hsl(252, 35%, 51%)'
-//     if (localStorage.getItem('color')) {
-//         color = localStorage.getItem('color')
-//     }
-//     return color
-// }
-// const getStorageTheme = () => {
-//     let theme = 'light-theme'
-//     if (localStorage.getItem('theme')) {
-//         theme = localStorage.getItem('theme')
-//     }
-//     return theme
-// }
+
+const getStorageColor = ()=> {
+    let color = 'hsl(252,35%, 51%)'
+    if(localStorage.getItem('color')){
+        color = localStorage.getItem('color')
+    }
+    return color
+}
+const getStorageTheme = ()=> {
+    let theme = 'light-theme'
+    if(localStorage.getItem('theme')){
+        theme = localStorage.getItem('theme')
+    }
+    return theme
+}

@@ -27,7 +27,7 @@ const About = () => {
                 Let's connect and explore the exciting possibilities that lie at the intersection of education and frontend development!
               </p>
             </div>
-            <div className="justify-center py-4 flex">
+            <div className="justify-center pt-8 flex">
               <a href={''} download={''} className="button">
                 <span >Downlaod CV</span>
                 <span className="button_icon"><FaDownload /></span>
