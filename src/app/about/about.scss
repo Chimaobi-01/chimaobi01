@@ -29,6 +29,7 @@
         flex-direction: column-reverse;
         padding: 20px;
         text-align: center;
+        margin-block: 1rem;
       }
 
       @include mdmax{

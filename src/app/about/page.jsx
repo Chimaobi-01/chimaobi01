@@ -29,7 +29,7 @@ const About = () => {
             </div>
             <div className="justify-center py-4 flex">
               <a href={''} download={''} className="button">
-                Downlaod CV
+                <span >Downlaod CV</span>
                 <span className="button_icon"><FaDownload /></span>
               </a>
             </div>
