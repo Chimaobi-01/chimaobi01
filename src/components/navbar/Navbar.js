@@ -1,15 +1,47 @@
+"use client"
+
+import { links } from '../../utils/data'
+import { useState } from "react"
+import NavLink from '../NavLink'
+import './navbar.scss'
 
 
 const Navbar = () => {
+  const [showMenu, setShowMenu] = useState(false)
+
   return (
-    <nav className="absolute top-0 left-0 w-full flex justify-between items-center p-16 px-32">
-        <span className="logo font-extrabold text-4xl">CC.</span>
-        <ul className="flex items-center gap-10 text-slate-500">
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Contacts</li>
+    <nav className='nav'>
+
+      <div className={`${showMenu ? "nav_menu show_menu" : "nav_menu"}`}>
+
+        <ul className="nav_list">
+          {
+            links.map(link => (
+              <li key={link.id} className='nav_list_item'>
+                <NavLink
+                  className="nav_link" 
+                  activeClassName="active_nav"
+                  href={link.path}
+                  onClick={()=> setShowMenu(!showMenu)}
+                  end
+                >
+                  {link.icon}
+                  <h3 className="nav_name">{link.name}</h3>
+                </NavLink>
+                
+              </li>
+            ))
+          }
         </ul>
+
+      </div>
+
+      <div className={`${showMenu ? "nav_toggle animate_toggle" : "nav_toggle"}`} onClick={() => setShowMenu(!showMenu)}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
     </nav>
   )
 }

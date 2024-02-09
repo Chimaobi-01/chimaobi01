@@ -1,4 +1,7 @@
+import Navbar from '@/components/navbar/Navbar'
 import './globals.css'
+import './App.css'
+import Themes from '@/components/themes/Themes'
 
 export const metadata = {
   title: 'portfolio',
@@ -8,7 +11,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body >{children}</body>
+      <body >
+        <Navbar />
+        <Themes />
+        {children}
+        </body>
     </html>
   )
 }

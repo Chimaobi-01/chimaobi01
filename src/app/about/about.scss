@@ -1,0 +1,88 @@
+@import '@/app/responsive.scss';
+
+.about_main {
+  margin-inline: auto;
+  max-width: 1123px;
+
+  @include mdmax{
+   padding-inline: 0;
+    max-width: 785px;
+  }
+  @include sm{
+    max-width: 635px;
+  }
+  .about {
+    .about_container {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 40px;
+      position: relative;
+      margin-inline: auto;
+      margin-block: 7rem;
+      padding: 0;
+      width: 80%;
+
+      @include sm{
+        column-gap: 30px;
+      }
+      @include xsm{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 20px;
+        text-align: center;
+      }
+
+      @include mdmax{
+        width: 100%;
+      }
+  
+      
+    
+
+      .about_info {
+       
+        h3 {
+          font-size: var(--h3-font-size);
+          font-weight: var(--weight-600);
+          margin-bottom: 20px;
+
+          @include xxsm {
+            display: block;
+            margin-bottom: 4px;
+          }
+        }
+
+        ul {
+          row-gap: 20px;
+          margin-bottom: 32px;
+
+          li {
+            span {
+              font-size: var(--small-font-size);
+
+              &:last-child {
+                color: var(--title-color);
+                font-weight: var(--weight-600);
+              }
+            }
+          }
+        }
+      }
+
+      .professional_image{
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: all 1s ease;
+  
+          
+        }
+      }
+    }
+  }
+
+ 
+}
+.greetings{
+  color: var(--first-color);
+}
